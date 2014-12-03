@@ -1,0 +1,86 @@
+pLink-SS is a software dedicated for the identification of disulfide bond peptides. This readme text file gives the guide to compile and configure pLink-SS. For the usage of pLink-SS, please check the user guide in the setup kit.
+
+Table of Contents
+=================
+
+- Needed Software
+- Compile
+- Extra Needed Files
+- Python Interface
+
+=================
+
+
+Needed Software
+===============
+
+pLink-SS is developed by C++ and Python. For the C++ part, G++ is used as the compiler, and msys is also needed in Windows system for the support of Makefile. 
+
+Software list:
+
+G++: version 4.6.2 or above.
+msys: version 1.0 or above.
+Python: version 2.7 or above.
+
+
+Compile
+=======
+
+The source code of pLink-SS is organized by Makefile. Usage:
+
+1 Modify the file make.include. Change the following line:
+
+BUILD_DIR :=
+INSTALL_DIR :=
+
+to appoint the build directory and the install directory.
+
+2 Use the following command:
+
+> make
+
+to automatically compile the whole source code. The binary files will be generated at the build directory.
+
+3 Use the following command:
+
+> make install
+
+to copy the files from the build directory to release directory.
+
+
+Extra Needed Files
+==================
+
+Some extra configuration files are needed for the usage of the software. The files needed are:
+
+dbconf.ini
+aa.ini
+modify.ini
+enzyme.ini
+xlink.ini
+pthreadGC2.dll
+pthreadGCE2.dll
+
+
+These files can be found in the setup kit. For the format and configuration of these files, please check the user guide.
+
+
+Python Interface
+================
+
+To facilitate the whole searching process, a Python interface is provided. The python code are provided under the folder python_plink. Numpy and Matplotlib Python package may also be needed.
+
+With Python installed, use the following command:
+
+>python flow.py pLink.ini
+
+to run the whole process. The format of pLink.ini is descripted in the user guide.
+
+
+
+
+
+
+
+
+

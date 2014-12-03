@@ -1,0 +1,10 @@
+BUILD_DIR := E:/迅雷网盘同步文件夹/工作/pLink_last/pLink_SS_2/build/
+INSTALL_DIR := E:/迅雷网盘同步文件夹/工作/pLink_last/pLink_SS_2/pLink_release/
+
+CXXFLAGS :=-O3 -Wall -fmessage-length=0
+
+OS := $(shell uname -s)
+IS_LINUX := $(shell echo $(OS)|grep -i linux)
+IS_WINDOWS := $(shell echo $(OS)|grep -i mingw)
+
+STATICDLL := no
